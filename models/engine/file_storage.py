@@ -58,6 +58,7 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
+        """Delete obj from __objects if it’s inside"""
         if obj:
             FileStorage.__objects.pop(
                 f"{obj.to_dict()['__class__']}.{obj.id}")

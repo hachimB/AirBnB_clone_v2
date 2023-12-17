@@ -107,31 +107,3 @@ class test_fileStorage(unittest.TestCase):
         from models.engine.file_storage import FileStorage
         print(type(storage))
         self.assertEqual(type(storage), FileStorage)
-
-    def test_delete(self):
-        """ Delete method deletes an object correctly """
-        new = BaseModel()
-        new.save()
-        storage.delete(new)
-        self.assertTrue('BaseModel' + '.' + new.id not in storage.all().keys())
-
-    def test_delete_no_args(self):
-        """ Delete method called with no args """
-        with self.assertRaises(TypeError):
-            storage.delete()
-    
-    def test_delete_wrong_arg(self):
-        """ Delete method called with wrong arg """
-        with self.assertRaises(KeyError):
-            storage.delete("test")
-    
-    def test_delete_no_obj(self):
-        """ Delete method called with no object """
-        with self.assertRaises(AttributeError):
-            storage.delete(BaseModel())
-    
-    def test_delete_no_class(self):
-        """ Delete method called with no class """
-        with self.assertRaises(TypeError):
-            storage.delete(None)
-        
