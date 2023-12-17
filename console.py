@@ -10,7 +10,6 @@ from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.review import Review
-from value_corrector import value_corrector
 
 
 class HBNBCommand(cmd.Cmd):
@@ -133,18 +132,17 @@ class HBNBCommand(cmd.Cmd):
         # Correct key-value elements in the dictionnary 'correct_kv_dict'
         correct_kv_dict = {}
         for parameter in parameters:
-            key, value = parameter.split('=')
-            if key and value:
-                key = key.replace('_', ' ')
-                converted_value = value_corrector(value)
-                if converted_value is not None:
-                    correct_kv_dict[key] = converted_value
+            key_value = parameter.split('=')
+            key = key_value[0]
+            value = key_value[1]
+            if type(value) is str:
+                value = value.replace('_', ' ').replace('"', '\\"')
+            correct_kv_dict[key] = value
 
         # We create a new instance and save all in storage
         new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
-        storage.save()
+        new_instance.save()
         print(new_instance.id)
-        storage.save()
 
     def help_create(self):
         """ Help information for the create method """
