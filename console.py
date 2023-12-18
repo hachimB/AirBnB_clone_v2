@@ -146,6 +146,9 @@ class HBNBCommand(cmd.Cmd):
 
             key, value = parameter.split('=')
 
+            if not key.isidentifier():
+                continue
+
             if not re.match('\".*\"', value):
                 if not isFloatInt(value):
                     continue

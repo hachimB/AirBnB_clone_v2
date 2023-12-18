@@ -1,1 +1,372 @@
-{"State.f7cf8877-1d99-48d2-834d-ee474b54f99c": {"created_at": "2023-12-18T15:18:38.514445", "updated_at": "2023-12-18T15:18:38.514682", "name": "California", "id": "f7cf8877-1d99-48d2-834d-ee474b54f99c", "__class__": "State"}, "State.ec0d3f76-850a-4b1b-b36c-c508e76ac3fe": {"created_at": "2023-12-18T15:18:38.515196", "updated_at": "2023-12-18T15:18:38.515244", "name": "Arizona", "id": "ec0d3f76-850a-4b1b-b36c-c508e76ac3fe", "__class__": "State"}, "Place.ff5cae9e-c30c-4006-a48e-12d6f9953f97": {"created_at": "2023-12-18T15:18:38.516159", "updated_at": "2023-12-18T15:18:38.516291", "city_id": "0001", "user_id": "0001", "name": "My little house", "number_rooms": 4, "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "ff5cae9e-c30c-4006-a48e-12d6f9953f97", "__class__": "Place"}, "Place.fedeec8e-785a-4d2e-af6b-e956e9529245": {"created_at": "2023-12-18T15:19:24.370159", "updated_at": "2023-12-18T15:19:24.370382", "city_id": "0001", "user_id": "0001", "name": "My little house", "number_rooms": 4, "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "fedeec8e-785a-4d2e-af6b-e956e9529245", "__class__": "Place"}, "Place.18a2d889-0c7f-458a-9b96-dd25dc3bf479": {"created_at": "2023-12-18T15:19:49.381647", "updated_at": "2023-12-18T15:19:49.381828", "city_id": "0001", "user_id": "0001", "name": "My little house", "number_rooms": 4, "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "18a2d889-0c7f-458a-9b96-dd25dc3bf479", "__class__": "Place"}, "Place.c00a14e3-1753-48a4-bfbe-bbd1cc801a9a": {"created_at": "2023-12-18T15:19:56.949894", "updated_at": "2023-12-18T15:19:56.950050", "city_id": "0001", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "c00a14e3-1753-48a4-bfbe-bbd1cc801a9a", "__class__": "Place"}, "Place.605a1075-b5ce-4d6e-90cb-272d069db599": {"created_at": "2023-12-18T15:20:46.590578", "updated_at": "2023-12-18T15:20:46.590833", "city_id": "0001", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "605a1075-b5ce-4d6e-90cb-272d069db599", "__class__": "Place"}, "Place.77bbd20a-bd95-4e9e-aba3-8a94ca251256": {"created_at": "2023-12-18T15:21:11.283367", "updated_at": "2023-12-18T15:21:11.283571", "city_id": "0001", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "77bbd20a-bd95-4e9e-aba3-8a94ca251256", "__class__": "Place"}, "Place.c6a64032-9988-479a-9054-06b7790c641a": {"created_at": "2023-12-18T15:21:30.550092", "updated_at": "2023-12-18T15:21:30.550314", "city_id": "0001", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "c6a64032-9988-479a-9054-06b7790c641a", "__class__": "Place"}, "Place.c15d1c5f-a714-4f97-a504-386865384370": {"created_at": "2023-12-18T15:21:34.411519", "updated_at": "2023-12-18T15:21:34.411775", "city_id": "0001", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "c15d1c5f-a714-4f97-a504-386865384370", "__class__": "Place"}, "Place.58262130-b64c-430f-b1e0-4109a38aceb0": {"created_at": "2023-12-18T15:21:45.152558", "updated_at": "2023-12-18T15:21:45.152766", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "58262130-b64c-430f-b1e0-4109a38aceb0", "__class__": "Place"}, "Place.92a4f9a5-23b6-4ba2-85e8-c94498a4f7b9": {"created_at": "2023-12-18T15:21:48.455182", "updated_at": "2023-12-18T15:21:48.455388", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "92a4f9a5-23b6-4ba2-85e8-c94498a4f7b9", "__class__": "Place"}, "Place.55543e46-f43b-4308-8159-4a5c38682a58": {"created_at": "2023-12-18T15:21:49.639897", "updated_at": "2023-12-18T15:21:49.640108", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "55543e46-f43b-4308-8159-4a5c38682a58", "__class__": "Place"}, "Place.1d01909f-c7fb-4dc2-a3df-6a51e4b0f1d3": {"created_at": "2023-12-18T15:21:50.783637", "updated_at": "2023-12-18T15:21:50.783846", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "1d01909f-c7fb-4dc2-a3df-6a51e4b0f1d3", "__class__": "Place"}, "Place.8660a7bf-55bb-4610-8243-f204791a6e40": {"created_at": "2023-12-18T15:21:51.562147", "updated_at": "2023-12-18T15:21:51.562373", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "8660a7bf-55bb-4610-8243-f204791a6e40", "__class__": "Place"}, "Place.24b343a7-2005-4820-b29f-df400f491601": {"created_at": "2023-12-18T15:21:52.402997", "updated_at": "2023-12-18T15:21:52.403148", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "24b343a7-2005-4820-b29f-df400f491601", "__class__": "Place"}, "Review.937c1937-6431-4621-a691-0834951ab6ac": {"created_at": "2023-12-18T15:23:04.685075", "updated_at": "2023-12-18T15:23:04.685222", "aze": "zae", "id": "937c1937-6431-4621-a691-0834951ab6ac", "__class__": "Review"}, "Review.419c20be-9f33-4d88-ab54-02fbfffd5088": {"created_at": "2023-12-18T15:23:20.518628", "updated_at": "2023-12-18T15:23:20.518825", "aze": "zae", "id": "419c20be-9f33-4d88-ab54-02fbfffd5088", "__class__": "Review"}, "Review.14325f92-5c98-4353-9e62-1da060f52755": {"created_at": "2023-12-18T15:23:37.557930", "updated_at": "2023-12-18T15:23:37.558093", "aze": "zae", "id": "14325f92-5c98-4353-9e62-1da060f52755", "__class__": "Review"}, "Review.004ec583-a177-4004-a253-ff4d698aca79": {"created_at": "2023-12-18T15:23:50.160550", "updated_at": "2023-12-18T15:23:50.160703", "aze": "zae", "id": "004ec583-a177-4004-a253-ff4d698aca79", "__class__": "Review"}, "Review.5c853478-392a-49da-94df-15ea31d4edfc": {"created_at": "2023-12-18T15:24:06.154858", "updated_at": "2023-12-18T15:24:06.154997", "id": "5c853478-392a-49da-94df-15ea31d4edfc", "__class__": "Review"}, "Review.a86b508d-51e3-4fe2-9158-860a2ee880dd": {"created_at": "2023-12-18T15:24:16.127624", "updated_at": "2023-12-18T15:24:16.127729", "id": "a86b508d-51e3-4fe2-9158-860a2ee880dd", "__class__": "Review"}, "City.da12a3fd-f2fe-4660-a6d7-83752c35111e": {"created_at": "2023-12-18T16:12:35.253888", "updated_at": "2023-12-18T16:12:35.254030", "city_id": "0001", "user_id": "0002", "id": "da12a3fd-f2fe-4660-a6d7-83752c35111e", "__class__": "City"}, "City.01144713-c80d-43ce-92d5-c7bf53b05695": {"created_at": "2023-12-18T16:12:55.439359", "updated_at": "2023-12-18T16:12:55.439533", "city_id": "0001", "user_id": "0002", "id": "01144713-c80d-43ce-92d5-c7bf53b05695", "__class__": "City"}, "Place.49b44e4c-90f2-4f33-8a88-ae8ca7962b28": {"created_at": "2023-12-18T16:17:07.199416", "updated_at": "2023-12-18T16:17:07.199573", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2123, "id": "49b44e4c-90f2-4f33-8a88-ae8ca7962b28", "__class__": "Place"}, "Place.aa6fbe56-ac89-4d08-b857-c625f5f5e1af": {"created_at": "2023-12-18T16:17:21.324395", "updated_at": "2023-12-18T16:17:21.324556", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2123, "id": "aa6fbe56-ac89-4d08-b857-c625f5f5e1af", "__class__": "Place"}, "Place.17ff1a9a-1a26-45e7-a296-5ca2d9e28673": {"created_at": "2023-12-18T16:17:53.677549", "updated_at": "2023-12-18T16:17:53.677638", "id": "17ff1a9a-1a26-45e7-a296-5ca2d9e28673", "__class__": "Place"}, "Place.e53f0306-b244-4782-8d0f-46ef1d59f272": {"created_at": "2023-12-18T16:18:24.006633", "updated_at": "2023-12-18T16:18:24.006740", "id": "e53f0306-b244-4782-8d0f-46ef1d59f272", "__class__": "Place"}, "Place.d738d14e-8b1e-43cb-ac25-9079b8b80b4b": {"created_at": "2023-12-18T16:21:08.309008", "updated_at": "2023-12-18T16:21:08.309132", "id": "d738d14e-8b1e-43cb-ac25-9079b8b80b4b", "__class__": "Place"}, "Place.b4a8c79e-f854-4d89-88ae-90ae1ef55474": {"created_at": "2023-12-18T16:53:14.126529", "updated_at": "2023-12-18T16:53:14.126642", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2123, "a": "aezaaze", "id": "b4a8c79e-f854-4d89-88ae-90ae1ef55474", "__class__": "Place"}, "Place.96547765-9092-48b7-a975-1d3fb3b0adc8": {"created_at": "2023-12-18T17:01:10.321814", "updated_at": "2023-12-18T17:01:10.321930", "ab": "aze\"azeae", "id": "96547765-9092-48b7-a975-1d3fb3b0adc8", "__class__": "Place"}, "Place.84beb4b1-41f6-402c-974c-4ee19d1586bd": {"created_at": "2023-12-18T17:01:24.217388", "updated_at": "2023-12-18T17:01:24.217515", "ab": "aze\"azeae", "id": "84beb4b1-41f6-402c-974c-4ee19d1586bd", "__class__": "Place"}, "Place.57bb0796-8c21-4d73-a150-b5a2ea37f6ef": {"created_at": "2023-12-18T17:01:47.194341", "updated_at": "2023-12-18T17:01:47.194646", "city_id": "0001", "user_id": "0002", "number_bathrooms": 2, "max_guest": 10, "price_by_night": 300, "latitude": 37.773972, "longitude": -122.431297, "id": "57bb0796-8c21-4d73-a150-b5a2ea37f6ef", "__class__": "Place"}}
+{
+  "State.f7cf8877-1d99-48d2-834d-ee474b54f99c": {
+    "created_at": "2023-12-18T15:18:38.514445",
+    "updated_at": "2023-12-18T15:18:38.514682",
+    "name": "California",
+    "id": "f7cf8877-1d99-48d2-834d-ee474b54f99c",
+    "__class__": "State"
+  },
+  "State.ec0d3f76-850a-4b1b-b36c-c508e76ac3fe": {
+    "created_at": "2023-12-18T15:18:38.515196",
+    "updated_at": "2023-12-18T15:18:38.515244",
+    "name": "Arizona",
+    "id": "ec0d3f76-850a-4b1b-b36c-c508e76ac3fe",
+    "__class__": "State"
+  },
+  "Place.ff5cae9e-c30c-4006-a48e-12d6f9953f97": {
+    "created_at": "2023-12-18T15:18:38.516159",
+    "updated_at": "2023-12-18T15:18:38.516291",
+    "city_id": "0001",
+    "user_id": "0001",
+    "name": "My little house",
+    "number_rooms": 4,
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "ff5cae9e-c30c-4006-a48e-12d6f9953f97",
+    "__class__": "Place"
+  },
+  "Place.fedeec8e-785a-4d2e-af6b-e956e9529245": {
+    "created_at": "2023-12-18T15:19:24.370159",
+    "updated_at": "2023-12-18T15:19:24.370382",
+    "city_id": "0001",
+    "user_id": "0001",
+    "name": "My little house",
+    "number_rooms": 4,
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "fedeec8e-785a-4d2e-af6b-e956e9529245",
+    "__class__": "Place"
+  },
+  "Place.18a2d889-0c7f-458a-9b96-dd25dc3bf479": {
+    "created_at": "2023-12-18T15:19:49.381647",
+    "updated_at": "2023-12-18T15:19:49.381828",
+    "city_id": "0001",
+    "user_id": "0001",
+    "name": "My little house",
+    "number_rooms": 4,
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "18a2d889-0c7f-458a-9b96-dd25dc3bf479",
+    "__class__": "Place"
+  },
+  "Place.c00a14e3-1753-48a4-bfbe-bbd1cc801a9a": {
+    "created_at": "2023-12-18T15:19:56.949894",
+    "updated_at": "2023-12-18T15:19:56.950050",
+    "city_id": "0001",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "c00a14e3-1753-48a4-bfbe-bbd1cc801a9a",
+    "__class__": "Place"
+  },
+  "Place.605a1075-b5ce-4d6e-90cb-272d069db599": {
+    "created_at": "2023-12-18T15:20:46.590578",
+    "updated_at": "2023-12-18T15:20:46.590833",
+    "city_id": "0001",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "605a1075-b5ce-4d6e-90cb-272d069db599",
+    "__class__": "Place"
+  },
+  "Place.77bbd20a-bd95-4e9e-aba3-8a94ca251256": {
+    "created_at": "2023-12-18T15:21:11.283367",
+    "updated_at": "2023-12-18T15:21:11.283571",
+    "city_id": "0001",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "77bbd20a-bd95-4e9e-aba3-8a94ca251256",
+    "__class__": "Place"
+  },
+  "Place.c6a64032-9988-479a-9054-06b7790c641a": {
+    "created_at": "2023-12-18T15:21:30.550092",
+    "updated_at": "2023-12-18T15:21:30.550314",
+    "city_id": "0001",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "c6a64032-9988-479a-9054-06b7790c641a",
+    "__class__": "Place"
+  },
+  "Place.c15d1c5f-a714-4f97-a504-386865384370": {
+    "created_at": "2023-12-18T15:21:34.411519",
+    "updated_at": "2023-12-18T15:21:34.411775",
+    "city_id": "0001",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "c15d1c5f-a714-4f97-a504-386865384370",
+    "__class__": "Place"
+  },
+  "Place.58262130-b64c-430f-b1e0-4109a38aceb0": {
+    "created_at": "2023-12-18T15:21:45.152558",
+    "updated_at": "2023-12-18T15:21:45.152766",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "58262130-b64c-430f-b1e0-4109a38aceb0",
+    "__class__": "Place"
+  },
+  "Place.92a4f9a5-23b6-4ba2-85e8-c94498a4f7b9": {
+    "created_at": "2023-12-18T15:21:48.455182",
+    "updated_at": "2023-12-18T15:21:48.455388",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "92a4f9a5-23b6-4ba2-85e8-c94498a4f7b9",
+    "__class__": "Place"
+  },
+  "Place.55543e46-f43b-4308-8159-4a5c38682a58": {
+    "created_at": "2023-12-18T15:21:49.639897",
+    "updated_at": "2023-12-18T15:21:49.640108",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "55543e46-f43b-4308-8159-4a5c38682a58",
+    "__class__": "Place"
+  },
+  "Place.1d01909f-c7fb-4dc2-a3df-6a51e4b0f1d3": {
+    "created_at": "2023-12-18T15:21:50.783637",
+    "updated_at": "2023-12-18T15:21:50.783846",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "1d01909f-c7fb-4dc2-a3df-6a51e4b0f1d3",
+    "__class__": "Place"
+  },
+  "Place.8660a7bf-55bb-4610-8243-f204791a6e40": {
+    "created_at": "2023-12-18T15:21:51.562147",
+    "updated_at": "2023-12-18T15:21:51.562373",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "8660a7bf-55bb-4610-8243-f204791a6e40",
+    "__class__": "Place"
+  },
+  "Place.24b343a7-2005-4820-b29f-df400f491601": {
+    "created_at": "2023-12-18T15:21:52.402997",
+    "updated_at": "2023-12-18T15:21:52.403148",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "24b343a7-2005-4820-b29f-df400f491601",
+    "__class__": "Place"
+  },
+  "Review.937c1937-6431-4621-a691-0834951ab6ac": {
+    "created_at": "2023-12-18T15:23:04.685075",
+    "updated_at": "2023-12-18T15:23:04.685222",
+    "aze": "zae",
+    "id": "937c1937-6431-4621-a691-0834951ab6ac",
+    "__class__": "Review"
+  },
+  "Review.419c20be-9f33-4d88-ab54-02fbfffd5088": {
+    "created_at": "2023-12-18T15:23:20.518628",
+    "updated_at": "2023-12-18T15:23:20.518825",
+    "aze": "zae",
+    "id": "419c20be-9f33-4d88-ab54-02fbfffd5088",
+    "__class__": "Review"
+  },
+  "Review.14325f92-5c98-4353-9e62-1da060f52755": {
+    "created_at": "2023-12-18T15:23:37.557930",
+    "updated_at": "2023-12-18T15:23:37.558093",
+    "aze": "zae",
+    "id": "14325f92-5c98-4353-9e62-1da060f52755",
+    "__class__": "Review"
+  },
+  "Review.004ec583-a177-4004-a253-ff4d698aca79": {
+    "created_at": "2023-12-18T15:23:50.160550",
+    "updated_at": "2023-12-18T15:23:50.160703",
+    "aze": "zae",
+    "id": "004ec583-a177-4004-a253-ff4d698aca79",
+    "__class__": "Review"
+  },
+  "Review.5c853478-392a-49da-94df-15ea31d4edfc": {
+    "created_at": "2023-12-18T15:24:06.154858",
+    "updated_at": "2023-12-18T15:24:06.154997",
+    "id": "5c853478-392a-49da-94df-15ea31d4edfc",
+    "__class__": "Review"
+  },
+  "Review.a86b508d-51e3-4fe2-9158-860a2ee880dd": {
+    "created_at": "2023-12-18T15:24:16.127624",
+    "updated_at": "2023-12-18T15:24:16.127729",
+    "id": "a86b508d-51e3-4fe2-9158-860a2ee880dd",
+    "__class__": "Review"
+  },
+  "City.da12a3fd-f2fe-4660-a6d7-83752c35111e": {
+    "created_at": "2023-12-18T16:12:35.253888",
+    "updated_at": "2023-12-18T16:12:35.254030",
+    "city_id": "0001",
+    "user_id": "0002",
+    "id": "da12a3fd-f2fe-4660-a6d7-83752c35111e",
+    "__class__": "City"
+  },
+  "City.01144713-c80d-43ce-92d5-c7bf53b05695": {
+    "created_at": "2023-12-18T16:12:55.439359",
+    "updated_at": "2023-12-18T16:12:55.439533",
+    "city_id": "0001",
+    "user_id": "0002",
+    "id": "01144713-c80d-43ce-92d5-c7bf53b05695",
+    "__class__": "City"
+  },
+  "Place.49b44e4c-90f2-4f33-8a88-ae8ca7962b28": {
+    "created_at": "2023-12-18T16:17:07.199416",
+    "updated_at": "2023-12-18T16:17:07.199573",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2123,
+    "id": "49b44e4c-90f2-4f33-8a88-ae8ca7962b28",
+    "__class__": "Place"
+  },
+  "Place.aa6fbe56-ac89-4d08-b857-c625f5f5e1af": {
+    "created_at": "2023-12-18T16:17:21.324395",
+    "updated_at": "2023-12-18T16:17:21.324556",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2123,
+    "id": "aa6fbe56-ac89-4d08-b857-c625f5f5e1af",
+    "__class__": "Place"
+  },
+  "Place.17ff1a9a-1a26-45e7-a296-5ca2d9e28673": {
+    "created_at": "2023-12-18T16:17:53.677549",
+    "updated_at": "2023-12-18T16:17:53.677638",
+    "id": "17ff1a9a-1a26-45e7-a296-5ca2d9e28673",
+    "__class__": "Place"
+  },
+  "Place.e53f0306-b244-4782-8d0f-46ef1d59f272": {
+    "created_at": "2023-12-18T16:18:24.006633",
+    "updated_at": "2023-12-18T16:18:24.006740",
+    "id": "e53f0306-b244-4782-8d0f-46ef1d59f272",
+    "__class__": "Place"
+  },
+  "Place.d738d14e-8b1e-43cb-ac25-9079b8b80b4b": {
+    "created_at": "2023-12-18T16:21:08.309008",
+    "updated_at": "2023-12-18T16:21:08.309132",
+    "id": "d738d14e-8b1e-43cb-ac25-9079b8b80b4b",
+    "__class__": "Place"
+  },
+  "Place.b4a8c79e-f854-4d89-88ae-90ae1ef55474": {
+    "created_at": "2023-12-18T16:53:14.126529",
+    "updated_at": "2023-12-18T16:53:14.126642",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2123,
+    "a": "aezaaze",
+    "id": "b4a8c79e-f854-4d89-88ae-90ae1ef55474",
+    "__class__": "Place"
+  },
+  "Place.96547765-9092-48b7-a975-1d3fb3b0adc8": {
+    "created_at": "2023-12-18T17:01:10.321814",
+    "updated_at": "2023-12-18T17:01:10.321930",
+    "ab": "aze\"azeae",
+    "id": "96547765-9092-48b7-a975-1d3fb3b0adc8",
+    "__class__": "Place"
+  },
+  "Place.84beb4b1-41f6-402c-974c-4ee19d1586bd": {
+    "created_at": "2023-12-18T17:01:24.217388",
+    "updated_at": "2023-12-18T17:01:24.217515",
+    "ab": "aze\"azeae",
+    "id": "84beb4b1-41f6-402c-974c-4ee19d1586bd",
+    "__class__": "Place"
+  },
+  "Place.57bb0796-8c21-4d73-a150-b5a2ea37f6ef": {
+    "created_at": "2023-12-18T17:01:47.194341",
+    "updated_at": "2023-12-18T17:01:47.194646",
+    "city_id": "0001",
+    "user_id": "0002",
+    "number_bathrooms": 2,
+    "max_guest": 10,
+    "price_by_night": 300,
+    "latitude": 37.773972,
+    "longitude": -122.431297,
+    "id": "57bb0796-8c21-4d73-a150-b5a2ea37f6ef",
+    "__class__": "Place"
+  },
+  "Place.6a435cca-3d7f-45ff-bef4-fc33ce0736f2": {
+    "created_at": "2023-12-18T17:07:55.453778",
+    "updated_at": "2023-12-18T17:07:55.453910",
+    "id": "6a435cca-3d7f-45ff-bef4-fc33ce0736f2",
+    "__class__": "Place"
+  },
+  "Place.2c3dfecf-87ca-47b2-9973-44ea304c9b2e": {
+    "created_at": "2023-12-18T17:08:04.589632",
+    "updated_at": "2023-12-18T17:08:04.589750",
+    "id": "2c3dfecf-87ca-47b2-9973-44ea304c9b2e",
+    "__class__": "Place"
+  },
+  "Place.ea7b55c5-2e86-4912-b0e0-03a7155151b8": {
+    "created_at": "2023-12-18T17:08:22.347057",
+    "updated_at": "2023-12-18T17:08:22.347212",
+    "\"": "azea",
+    "id": "ea7b55c5-2e86-4912-b0e0-03a7155151b8",
+    "__class__": "Place"
+  },
+  "Place.387c350f-b02e-41ac-8487-5e421d5d079c": {
+    "created_at": "2023-12-18T17:08:27.777533",
+    "updated_at": "2023-12-18T17:08:27.777682",
+    "\"": "azea",
+    "id": "387c350f-b02e-41ac-8487-5e421d5d079c",
+    "__class__": "Place"
+  },
+  "Place.302dac24-1cef-44ff-91f5-aa5502a296b1": {
+    "created_at": "2023-12-18T17:10:43.552065",
+    "updated_at": "2023-12-18T17:10:43.552241",
+    "id": "302dac24-1cef-44ff-91f5-aa5502a296b1",
+    "__class__": "Place"
+  },
+  "Place.9ac7e4bc-ab0c-4349-bc3d-c4496f43a8fb": {
+    "created_at": "2023-12-18T17:10:50.754310",
+    "updated_at": "2023-12-18T17:10:50.754415",
+    "id": "9ac7e4bc-ab0c-4349-bc3d-c4496f43a8fb",
+    "__class__": "Place"
+  },
+  "Place.62f3f270-651d-4db4-a33e-6e32c9c78017": {
+    "created_at": "2023-12-18T17:10:53.363262",
+    "updated_at": "2023-12-18T17:10:53.363363",
+    "id": "62f3f270-651d-4db4-a33e-6e32c9c78017",
+    "__class__": "Place"
+  }
+}
