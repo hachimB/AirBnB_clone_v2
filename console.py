@@ -124,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
         the_class = parts[0]
         parameters = parts[1:]
 
-        # We verify if the user enter a correct class name
+        # Here we verify if the user enter a correct class name
         if the_class not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
