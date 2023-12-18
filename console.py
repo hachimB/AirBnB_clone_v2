@@ -154,7 +154,7 @@ class HBNBCommand(cmd.Cmd):
                 if value.is_integer():
                     value = int(value)
             else:
-                value = value.replace("_", " ").replace("\"", "")
+                value = value.replace("_", " ")[1:-1]
 
             if key and value:
                 if value is not None:
