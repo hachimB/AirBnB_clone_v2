@@ -150,12 +150,6 @@ class HBNBCommand(cmd.Cmd):
         print(correct_kv_dict)
 
         new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
-        print(new_instance)
-        print()
-        print(new_instance.to_dict())
-        print()
-        print(storage.all())
-        print()
         new_instance.save()
         print(new_instance.id)
 
