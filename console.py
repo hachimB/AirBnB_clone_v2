@@ -2,6 +2,7 @@
 """ Console Module """
 import cmd
 import sys
+import re
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.user import User
@@ -74,7 +75,7 @@ class HBNBCommand(cmd.Cmd):
                 pline = pline[2].strip()  # pline is now str
                 if pline:
                     # check for *args or **kwargs
-                    if pline[0] == '{' and pline[-1] =='}'\
+                    if pline[0] == '{' and pline[-1] == '}'\
                             and type(eval(pline)) is dict:
                         _args = pline
                     else:
@@ -134,17 +135,29 @@ class HBNBCommand(cmd.Cmd):
         correct_kv_dict = {}
         for parameter in parameters:
             key, value = parameter.split('=')
+            if not re.match('\".*\"', value):
+                value = float(value)
+                if value.is_integer():
+                    value = int(value)
+            else:
+                value = value.replace("_", " ").replace("\"", "")
+
             if key and value:
-                key = key.replace('_', ' ')
-                converted_value = value_corrector(value)
-                if converted_value is not None:
-                    correct_kv_dict[key] = converted_value
+                if value is not None:
+                    correct_kv_dict[key] = value
 
         # We create a new instance and save all in storage
+        print(correct_kv_dict)
+
         new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
-        storage.save()
+        print(new_instance)
+        print()
+        print(new_instance.to_dict())
+        print()
+        print(storage.all())
+        print()
+        new_instance.save()
         print(new_instance.id)
-        storage.save()
 
     def help_create(self):
         """ Help information for the create method """

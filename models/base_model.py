@@ -6,14 +6,18 @@ from datetime import datetime
 
 class BaseModel:
     """A base class for all hbnb models"""
+
     def __init__(self, *args, **kwargs):
         """Instatntiates a new model"""
+        from models import storage
+
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+
         if not kwargs:
-            from models import storage
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
         else:
             if 'created_at' in kwargs and 'updated_at' in kwargs:
                 kwargs['updated_at'] = datetime.strptime(kwargs['updated_at'],
@@ -24,6 +28,8 @@ class BaseModel:
             kwargs.pop('__class__', None)
             self.__dict__.update(kwargs)
             self.id = kwargs.get('id', str(uuid.uuid4()))
+
+        storage.new(self)
 
     def __str__(self):
         """Returns a string representation of the instance"""
