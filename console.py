@@ -10,6 +10,7 @@ from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.review import Review
+from value_corrector import value_corrector
 
 
 class HBNBCommand(cmd.Cmd):
@@ -73,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
                 pline = pline[2].strip()  # pline is now str
                 if pline:
                     # check for *args or **kwargs
-                    if pline[0] == '{' and pline[-1] =='}'\
+                    if pline[0] == '{' and pline[-1] == '}'\
                             and type(eval(pline)) is dict:
                         _args = pline
                     else:
@@ -118,31 +119,33 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-
-        # Here we divise the args to get class and params separatly
-        parts = args.split()
-        the_class = parts[0]
-        parameters = parts[1:]
-
-        # Here we verify if the user enter a correct class name
-        if the_class not in HBNBCommand.classes:
+        elif args.split()[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
+        try:
+            kwargs = {}
+            for arg in args.split()[1:]:
+                key, value = arg.split('=')
+                if value[0] == '"' and value[-1] == '"':
+                    value = value[1:-1].replace('_', ' ')
+                elif '.' in value:
+                    value = float(value)
+                else:
+                    value = int(value)
+                kwargs[key] = value
+            if '__class__' not in kwargs:
+                kwargs['__class__'] = args.split()[0]
+            new_instance = HBNBCommand.classes[args.split()[0]](**kwargs)
+            storage.save()
+            print(new_instance.id)
+            storage.save()
+        except NameError as ve:
+            print(f"Error: {ve}")
+        except SyntaxError as se:
+            print(f"Error: {se}")
+        except Exception as e:
+           print(e)
 
-        # Correct key-value elements in the dictionnary 'correct_kv_dict'
-        correct_kv_dict = {}
-        for parameter in parameters:
-            key_value = parameter.split('=')
-            key = key_value[0]
-            value = key_value[1]
-            if type(value) is str:
-                value = value.replace('_', ' ').replace('"', '\\"')
-            correct_kv_dict[key] = value
-
-        # We create a new instance and save all in storage
-        new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
-        new_instance.save()
-        print(new_instance.id)
 
     def help_create(self):
         """ Help information for the create method """
@@ -341,3 +344,4 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
+
