@@ -131,11 +131,25 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
 
+        def isFloatInt(r):
+            try:
+                float(r)
+            except ValueError:
+                return False
+            return True
+
         # Correct key-value elements in the dictionnary 'correct_kv_dict'
         correct_kv_dict = {}
         for parameter in parameters:
+            if not re.match('.+=.+', parameter):
+                continue
+
             key, value = parameter.split('=')
+
             if not re.match('\".*\"', value):
+                if not isFloatInt(value):
+                    continue
+
                 value = float(value)
                 if value.is_integer():
                     value = int(value)

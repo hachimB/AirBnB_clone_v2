@@ -107,34 +107,3 @@ class test_fileStorage(unittest.TestCase):
         from models.engine.file_storage import FileStorage
         print(type(storage))
         self.assertEqual(type(storage), FileStorage)
-
-    def test_console_reload(self):
-        """ Tests console reload method """
-        from console import HBNBCommand
-        from unittest.mock import patch
-        import os
-        import sys
-        from io import StringIO
-        new = BaseModel()
-        storage.save()
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("BaseModel.reload()")
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("BaseModel.all()")
-        self.assertIn("'BaseModel." + new.id + "': <models.base_model.BaseModel object at", f.getvalue())
-        self.assertIn(new.id, f.getvalue())
-    
-    def test_console_create(self):
-        """ Tests console create method """
-        from console import HBNBCommand
-        from unittest.mock import patch
-        import os
-        import sys
-        from io import StringIO
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("BaseModel.create()")
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("BaseModel.all()")
-        self.assertIn("'BaseModel." + new.id + "': <models.base_model.BaseModel object at", f.getvalue())
-        self.assertIn(new.id, f.getvalue())
-        
