@@ -147,11 +147,12 @@ class HBNBCommand(cmd.Cmd):
                     correct_kv_dict[key] = value
 
         # We create a new instance and save all in storage
-        print(correct_kv_dict)
 
         new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
-        new_instance.save()
+
         print(new_instance.id)
+
+        new_instance.save()
 
     def help_create(self):
         """ Help information for the create method """
