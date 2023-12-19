@@ -8,10 +8,11 @@ from os import environ
 
 from state import State
 
+
 class DBStorage():
     """Class for managing database storage"""
     __engine = None
-    __session = sessionmaker(bind=__engine)()
+    __session = None
 
     def __init__(self):
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(
@@ -29,9 +30,19 @@ class DBStorage():
             objects = self.__session.query(cls).all()
 
             _dict_ = {}
-        
-            print(objects)
 
+            for obj in objects:
+                _dict_['{}.{}'.format(
+                    obj.__class__, obj.id
+                )] = obj
 
-dbs = DBStorage()
-dbs.all(State)
+            return _dict_
+
+        objects = self.__session.query(
+            User, State, City, Amenity, Place, Review
+        ).all()
+
+        for obj in objects:
+            _dict_['{}.{}'.format(
+                obj.__class__, obj.id
+            )] = obj
