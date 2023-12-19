@@ -37,26 +37,16 @@ class DBStorage:
 
     def all(self, cls=None):
         """all """
-        if cls:
-            objects = self.__session.query(cls).all()
+         objects = self.__session.query(cls).all()
 
-            _dict_ = {}
+          _dict_ = {}
 
-            for obj in objects:
+           for obj in objects:
                 _dict_['{}.{}'.format(
                     obj.__class__.__name__, obj.id
                 )] = obj
 
             return _dict_
-
-        objects = self.__session.query(
-            User, State, City, Amenity, Place, Review
-        ).all()
-
-        for obj in objects:
-            _dict_['{}.{}'.format(
-                obj.__class__.__name__, obj.id
-            )] = obj
 
     def new(self, obj):
         """new obj in the database"""
