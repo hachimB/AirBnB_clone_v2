@@ -14,16 +14,13 @@ from models.place import Place
 from models.review import Review
 
 
-class DBStorage():
+class DBStorage:
     """Class for managing database storage"""
     __engine = None
     __session = None
 
     def __init__(self):
         """init method"""
-
-        Session = sessionmaker(bind = self.__engine)
-        self.__engine = Session()
 
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(
             environ.get('HBNB_MYSQL_USER'),
@@ -44,7 +41,7 @@ class DBStorage():
 
             for obj in objects:
                 _dict_['{}.{}'.format(
-                    obj.__class__, obj.id
+                    obj.__class__.__name__, obj.id
                 )] = obj
 
             return _dict_
@@ -55,7 +52,7 @@ class DBStorage():
 
         for obj in objects:
             _dict_['{}.{}'.format(
-                obj.__class__, obj.id
+                obj.__class__.__name__, obj.id
             )] = obj
 
     def new(self, obj):
@@ -71,3 +68,10 @@ class DBStorage():
         if obj is not None:
             self.__session.delete(obj)
             self.__session.commit()
+
+    def reload(self):
+        """Reload"""
+        Base.metadata.create_all(self.__engine)
+        session_factory = sessionmaker(bind=self.__engine,
+                                       expire_on_commit=False)
+        self.__session = scoped_session(session_factory)
