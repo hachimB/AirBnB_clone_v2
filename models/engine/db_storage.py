@@ -60,4 +60,14 @@ class DBStorage():
 
     def new(self, obj):
         """new obj in the database"""
-        
+        self.__session.add(obj)
+
+    def save(self, obj):
+        """save"""
+        self.__session.commit()
+
+    def delete(self, obj=None):
+        """delete from the current database session obj if not None"""
+        if obj is not None:
+            self.__session.delete(obj)
+            self.__session.commit()
