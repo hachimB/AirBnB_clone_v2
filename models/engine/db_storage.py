@@ -40,9 +40,7 @@ class DBStorage:
         objects = self.__session.query(cls).all()
 
         _dict_ = {}
-        print(objects)
         for obj in objects:
-            print(obj.id)
             _dict_['{}.{}'.format(
                 obj.__class__.__name__, obj.id
             )] = obj
