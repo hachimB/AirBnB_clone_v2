@@ -22,7 +22,7 @@ class DBStorage():
     def __init__(self):
         """init method"""
 
-        Session = sessionmaker(bind = self.__engine)
+        Session = sessionmaker(bind=self.__engine)
         self.__engine = Session()
 
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
-from base_model import BaseModel, Base
+from models.base_model import BaseModel, Base
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
@@ -11,7 +11,7 @@ class State(BaseModel, Base):
     __tablename__ = 'states'
     name = Column(String(128), nullable=False)
     cities = relationship(
-        'City', cascade='all, delete-orphan', back_populates='state')
+        'City', cascade='all, delete-orphan', backref='state')
     # name = ""
 
     @property

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Console Module """
+import re
 import cmd
 import sys
-import re
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.user import User
@@ -117,6 +117,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, args):
         """ Create an object of any class"""
+
         if not args:
             print("** class name missing **")
             return
@@ -159,9 +160,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 value = value.replace("_", " ")[1:-1]
 
-            if key and value:
-                if value is not None:
-                    correct_kv_dict[key] = value
+                correct_kv_dict[key] = value
 
         # We create a new instance and save all in storage
 

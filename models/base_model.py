@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 """This module defines a base class for all models in our hbnb clone"""
+from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from datetime import datetime
-from sqlalchemy import create_engine, DateTime, Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy import create_engine, DateTime, Column, Integer, String
 
 
 Base = declarative_base()
 
+
 class BaseModel:
     """A base class for all hbnb models"""
-    id = Column(String(60), nullable=False, primary_key =True)
+    id = Column(String(60), nullable=False, primary_key=True)
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
     updated_at = Column(DateTime, nullable=False, default=datetime.utcnow())
 
@@ -27,11 +28,12 @@ class BaseModel:
             self.updated_at = datetime.now()
         else:
             if 'created_at' in kwargs and 'updated_at' in kwargs:
-                kwargs['updated_at'] = datetime.strptime(kwargs['updated_at'],
-                                                     '%Y-%m-%dT%H:%M:%S.%f')
-                kwargs['created_at'] = datetime.strptime(kwargs['created_at'],
-                                                     '%Y-%m-%dT%H:%M:%S.%f')
-            #del kwargs['__class__']
+                kwargs['updated_at'] = datetime.strptime(
+                    kwargs['updated_at'],
+                    '%Y-%m-%dT%H:%M:%S.%f')
+                kwargs['created_at'] = datetime.strptime(
+                    kwargs['created_at'],
+                    '%Y-%m-%dT%H:%M:%S.%f')
             kwargs.pop('__class__', None)
             self.__dict__.update(kwargs)
             self.id = kwargs.get('id', str(uuid.uuid4()))
