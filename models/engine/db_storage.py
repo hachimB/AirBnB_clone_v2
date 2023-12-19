@@ -62,7 +62,7 @@ class DBStorage:
         """new obj in the database"""
         self.__session.add(obj)
 
-    def save(self, obj):
+    def save(self):
         """save"""
         self.__session.commit()
 
