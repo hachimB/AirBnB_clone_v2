@@ -22,12 +22,9 @@ class DBStorage:
     def __init__(self):
         """init method"""
 
-<<<<<<< HEAD
         Session = sessionmaker(bind=self.__engine)
         self.__engine = Session()
 
-=======
->>>>>>> refs/remotes/origin/master
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(
             environ.get('HBNB_MYSQL_USER'),
             environ.get('HBNB_MYSQL_PWD'),
