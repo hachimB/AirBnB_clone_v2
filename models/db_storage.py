@@ -5,8 +5,13 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from os import environ
-
-from state import State
+from models.base_model import Base
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 
 class DBStorage():
@@ -15,6 +20,11 @@ class DBStorage():
     __session = None
 
     def __init__(self):
+        """init method"""
+
+        Session = sessionmaker(bind = self.__engine)
+        self.__engine = Session()
+
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(
             environ.get('HBNB_MYSQL_USER'),
             environ.get('HBNB_MYSQL_PWD'),
