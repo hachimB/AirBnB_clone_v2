@@ -44,8 +44,9 @@ class DBStorage:
             _dict_['{}.{}'.format(
                 obj.__class__.__name__, obj.id
             )] = obj
-def new(self, obj):
-    """new obj in the database"""
+
+    def new(self, obj):
+        """new obj in the database"""
         if self.__engine.dialect.has_table(self.__engine, obj.__tablename__):
             self.__session.add(obj)
             self.__session.commit()
