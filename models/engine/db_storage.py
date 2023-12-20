@@ -37,38 +37,28 @@ class DBStorage:
 
     def all(self, cls=None):
         """all """
-        objects = self.__session.query(cls).all()
+        if cls:
+            objects = self.__session.query(cls).all()
+
+            _dict_ = {}
+            for obj in objects:
+                _dict_['{}.{}'.format(
+                    obj.__class__.__name__, obj.id
+                )] = obj
+
+            return _dict_
+
+        classes = [User, State, City, Place, Review]
 
         _dict_ = {}
-        for obj in objects:
-            _dict_['{}.{}'.format(
-                obj.__class__.__name__, obj.id
-            )] = obj
 
-    def new(self, obj):
-        """new obj in the database"""
-        if self.__engine.dialect.has_table(self.__engine, obj.__tablename__):
-            self.__session.add(obj)
-            self.__session.commit()
-        else:
-            print("Table does not exist.")
+        for clss in classes:
+            objects = self.__session.query(clss).all()
 
-    def save(self):
-        """save"""
-        self.__session.commit()
-
-    def delete(self, obj=None):
-        """delete from the current database session obj if not None"""
-        if obj is not None:
-            self.__session.delete(obj)
-            self.__session.commit()
-
-    def reload(self):
-        """Reload"""
-        Base.metadata.create_all(self.__engine)
-        session_factory = sessionmaker(bind=self.__engine,
-                                       expire_on_commit=False)
-        self.__session = scoped_session(session_factory)
+            for obj in objects:
+                _dict_['{}.{}'.format(
+                    obj.__class__.__name__, obj.id
+                )] = obj
 
         return _dict_
 
@@ -84,7 +74,7 @@ class DBStorage:
         """delete from the current database session obj if not None"""
         if obj is not None:
             self.__session.delete(obj)
-            self.__session.commit()
+        self.__session.commit()
 
     def reload(self):
         """Reload"""
