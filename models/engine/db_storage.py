@@ -44,6 +44,30 @@ class DBStorage:
             _dict_['{}.{}'.format(
                 obj.__class__.__name__, obj.id
             )] = obj
+def new(self, obj):
+    """new obj in the database"""
+        if self.__engine.dialect.has_table(self.__engine, obj.__tablename__):
+            self.__session.add(obj)
+            self.__session.commit()
+        else:
+            print("Table does not exist.")
+
+    def save(self):
+        """save"""
+        self.__session.commit()
+
+    def delete(self, obj=None):
+        """delete from the current database session obj if not None"""
+        if obj is not None:
+            self.__session.delete(obj)
+            self.__session.commit()
+
+    def reload(self):
+        """Reload"""
+        Base.metadata.create_all(self.__engine)
+        session_factory = sessionmaker(bind=self.__engine,
+                                       expire_on_commit=False)
+        self.__session = scoped_session(session_factory)
 
         return _dict_
 
