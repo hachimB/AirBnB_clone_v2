@@ -164,7 +164,8 @@ class HBNBCommand(cmd.Cmd):
 
         # We create a new instance and save all in storage
 
-                new_instance = HBNBCommand.classes[the_class](**correct_kv_dict)
+                new_instance = HBNBCommand.classes[the_class](
+                    **correct_kv_dict)
 
         print(new_instance.id)
 
