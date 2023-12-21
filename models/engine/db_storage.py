@@ -65,6 +65,7 @@ class DBStorage:
     def new(self, obj):
         """new obj in the database"""
         self.__session.add(obj)
+        print(obj)
 
     def save(self):
         """save"""

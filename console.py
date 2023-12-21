@@ -160,7 +160,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 value = value.replace("_", " ")[1:-1]
 
-                correct_kv_dict[key] = value
+            correct_kv_dict[key] = value
 
         # We create a new instance and save all in storage
 
@@ -251,7 +251,7 @@ class HBNBCommand(cmd.Cmd):
             if args not in HBNBCommand.classes:
                 print("** class doesn't exist **")
                 return
-            
+
             for k, v in storage.all(eval(args)).items():
                 if k.split('.')[0] == args:
                     print_list.append(str(v))
