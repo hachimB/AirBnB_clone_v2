@@ -14,7 +14,7 @@ class State(BaseModel, Base):
         'City', cascade='all, delete-orphan', backref='state')
 
     @property
-    def citties(self):
+    def cities(self):
         """Getter attribute in case of file storage"""
         from models import storage
         from models.city import City
