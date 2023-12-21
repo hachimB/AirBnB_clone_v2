@@ -23,7 +23,7 @@ class Place(BaseModel, Base):
                            cascade="all, delete-orphan")
 
     @property
-    def get_reviews(self):
+    def reviews(self):
         """Getter attribute in case of file storage"""
         from models import storage
         from models.reviews import Review
