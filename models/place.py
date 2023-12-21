@@ -23,12 +23,14 @@ class Place(BaseModel, Base):
                            cascade="all, delete-orphan")
 
     @property
-    def reviews(self):
+    def get_reviews(self):
         """Getter attribute in case of file storage"""
         from models import storage
         from models.reviews import Review
         reviews = []
-        for v in storage.all(Review).values():
+        for k, v in storage.all(Review).items():
             if v.place_id == self.id:
-                reviews.append(City(**v))
+                reviews.append(Review(**v))
+
         return reviews
+
