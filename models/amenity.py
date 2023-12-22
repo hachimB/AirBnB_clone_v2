@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
-from models.base_model import BaseModel, Base
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
-from models.place import Place
+from models.base_model import BaseModel
 
 
-class Amenity(BaseModel, Base):
+class Amenity(BaseModel):
+    """ameneties
     __tablename__ = 'amenities'
     name = Column(String(128), nullable=False)
     place_amenities = relationship('Place', secondary='place_amenity',
-                                   back_populates='amenities')
+                                   back_populates='amenities')"""
+    name = ""

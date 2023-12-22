@@ -22,7 +22,7 @@ class Place(BaseModel, Base):
     amenity_ids = []
     reviews = relationship("Review", backref="place",
                            cascade="all, delete-orphan")
-    place_amenity = Table('place_amenity',
+    """place_amenity = Table('place_amenity',
                           Base.metadata, Column('place_id', String(60),
                                                 ForeignKey('places.id'),
                                                 primary_key=True,
@@ -31,6 +31,7 @@ class Place(BaseModel, Base):
            primary_key=True, nullable=False), extend_existing=True)
     amenities = relationship('Amenity', secondary='place_amenity',
                              back_populates='place_amenities', viewonly=False)
+"""
 
     @property
     def reviews(self):
@@ -44,20 +45,18 @@ class Place(BaseModel, Base):
 
         return reviews
 
-    @property
+    """@property
     def amenities(self):
-        """amenities"""
         amenity_ids_list = self.amenity_ids.split(',')
         return [Amenity.get(amenity_id) for amenity_id in amenity_ids_list if
                 amenity_id]
 
     @amenities.setter
     def amenities(self, amenity_obj):
-        """Setter attribute that appends Amenity.id to amenity_ids."""
         if isinstance(amenity_obj, Amenity):
             amenity_id = amenity_obj.id
             if self.amenity_ids:
                 self.amenity_ids.append(amenity_id)
             else:
                 self.amenity_ids = [amenity_id]
-            self.save()
+            self.save()"""
