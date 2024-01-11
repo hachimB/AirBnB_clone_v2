@@ -9,7 +9,4 @@ def do_pack():
     date = datetime.now().strftime("%Y%m%d%H%M%S")
     local("mkdir -p versions")
     local(f"tar -czvf versions/web_static_{date}.tar.gz web_static")
-    #if arch.succeeded:
-     #  return f"versions/web_static_{date}.tar.gz"
-    #else:
-     #  return None
+
