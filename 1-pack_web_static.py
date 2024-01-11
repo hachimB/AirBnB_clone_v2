@@ -11,7 +11,6 @@ def do_pack():
     archive = local(f"tar -czvf web_static_{date}.tar.gz web_static")
     local("mkdir -p versions")
     local(f"mv web_static_{date}.tar.gz versions")
-    if archive.ok:
-        return f"versions/web_static_{date}.tar.gz"
-    else:
+    if archive.failed:
         return None
+    return f"versions/web_static_{date}.tar.gz"
