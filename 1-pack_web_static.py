@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module documentation"""
-from fabric.api import local
+from fabric.api import local, task
 from datetime import datetime
 
 
@@ -12,4 +12,4 @@ def do_pack():
     if arch.failed:
         return None
     else:
-        return f"versions/web_static_{date}.tgz"
+        return arch
