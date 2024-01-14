@@ -23,7 +23,8 @@ def do_deploy(archive_path):
             (archive_name, archive_name_without_ext))
         run("rm -rf /tmp/{}".format(archive_name))
         run("mv /data/web_static/releases/{}/web_static/* \
-                /data/web_static/releases/{}/".format(archive_name_without_ext, archive_name_without_ext))
+                /data/web_static/releases/{}/".format(
+                    archive_name_without_ext, archive_name_without_ext))
         run("rm -rf /data/web_static/releases/{}/web_static".format(
             archive_name_without_ext))
         run("rm -rf /data/web_static/current")
