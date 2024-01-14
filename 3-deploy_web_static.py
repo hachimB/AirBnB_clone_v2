@@ -12,12 +12,13 @@ env.user = 'ubuntu'
 def do_pack():
     """do_pack function"""
     date = datetime.now().strftime("%Y%m%d%H%M%S")
+    archive_path = f"versions/web_static_{date}"
     local("mkdir -p versions")
-    arch = local(f"tar -czvf versions/web_static_{date}.tgz web_static")
+    arch = local(f"tar -czvf {archive_path}.tgz web_static")
     if arch.failed:
         return None
     else:
-        return arch
+        return archive_path
 
 
 def do_deploy(archive_path):
@@ -43,8 +44,7 @@ def do_deploy(archive_path):
 
 def deploy():
     """deploy function"""
-    try:
-        arch = do_pack()
-        return do_deploy(arch)
-    except Exception as e:
+    archive_path = do_pack()
+    if not archive_path:
         return False
+    return do_deploy(archive_path)
