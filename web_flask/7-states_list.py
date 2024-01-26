@@ -16,7 +16,6 @@ def close_storage(exception):
 def states_list():
     """states"""
     states = storage.all(State).values()
-    states = sorted(states, key=lambda state: state.name)
     return render_template('7-states_list.html', slist=states)
 
 
