@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def close_storage(exception):
+def close_storage():
     """close storage"""
     storage.close()
 
