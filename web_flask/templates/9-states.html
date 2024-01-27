@@ -11,9 +11,7 @@
 		         <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
 		    {% endfor %}
 	    </UL>
-	 {% else %}
-
-	 {% if ste %}
+	 {% elif ste %}
 	     <H1>State:</H1>
 	     <H3>Cities:</H3>
 	      {% for city in ste.cities|sort(attribute='name') %}
@@ -24,6 +22,5 @@
 
 	 {% else %}
 	     <H1>Not found!</H1>
-	 {% endif %}
 	 {% endif %}
     </BODY>
