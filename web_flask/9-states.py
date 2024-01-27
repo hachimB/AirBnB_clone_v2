@@ -18,13 +18,6 @@ def remove_session(exception):
 def states():
     """cities by states"""
     all_states = storage.all(State)
-    """storage_type = os.getenv('HBNB_TYPE_STORAGE')
-    for s in all_states.values():
-        if storage_type == 'db':
-            cities = s.cities
-        else:
-            cities = s.cities()
-        s.all_cities = cities"""
     return render_template('9-states.html', states=all_states)
 
 
@@ -32,15 +25,9 @@ def states():
 def state_id(id):
     """state id"""
     all_states = storage.all(State)
-    """storage_type = os.getenv('HBNB_TYPE_STORAGE')"""
-    for s in all_states.values():
-        if s.id == id:
-            """if storage_type == 'db':
-                cities = s.cities"""
-            """else:
-                cities = s.cities()
-                s.all_cities = cities"""
-            return render_template('9-states.html', ste=s)
+    for state in all_states.values():
+        if state.id == id:
+            return render_template('9-states.html', ste=state)
     return render_template('9-states.html')
 
 
