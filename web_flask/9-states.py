@@ -18,7 +18,7 @@ def remove_session(exception):
 def states():
     """cities by states"""
     all_states = storage.all(State)
-    return render_template('9-states.html', states=all_states)
+    return render_template('9-states.html', state=all_states)
 
 
 @app.route('/states/<id>', strict_slashes=False)
@@ -27,7 +27,7 @@ def state_id(id):
     all_states = storage.all(State)
     for state in all_states.values():
         if state.id == id:
-            return render_template('9-states.html', states=state)
+            return render_template('9-states.html', state=state)
     return render_template('9-states.html')
 
 
