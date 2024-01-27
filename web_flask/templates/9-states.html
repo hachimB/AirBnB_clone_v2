@@ -11,7 +11,7 @@
 		         <LI>{{ ste.id }}: <B>{{ ste.name }}</B></LI>
 		    {% endfor %}
 	    </UL>
-	 {% elif state is defined %}
+	 {% elif state is not none %}
 	     <H1>State:</H1>
 	     <H3>Cities:</H3>
 	         <UL>
