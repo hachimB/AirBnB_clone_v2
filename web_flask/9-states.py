@@ -32,9 +32,9 @@ def states():
 def state_id(id):
     """state id"""
     all_states = storage.all(State)
-    storage_type = os.getenv('HBNB_TYPE_STORAGE')
-    for s in all_states.values():
-        if s.id == id:
+    #storage_type = os.getenv('HBNB_TYPE_STORAGE')
+    """for s in all_states.values():
+        if s.id == id:"""
             """if storage_type == 'db':
                 cities = s.cities"""
             """else:
