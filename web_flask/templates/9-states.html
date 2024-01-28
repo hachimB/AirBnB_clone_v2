@@ -4,7 +4,7 @@
         <TITLE>HBNB</TITLE>
     </HEAD>
     <BODY>
-	 {% if state is is iterable %}
+	 {% if state is iterable %}
 	    <H1>States</H1>
 	    <UL>
 		    {% for ste in state.values()|sort(attribute='name') %}
